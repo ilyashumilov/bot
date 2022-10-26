@@ -22,6 +22,7 @@ def handler(message):
 
       else:
             bot.send_message(message.chat.id, msg7)
+            print(message.text)
 
 
 @bot.callback_query_handler(lambda query: query.data in ["vk"])
