@@ -21,7 +21,7 @@ def handler(message):
       elif message.text == '10':
             # bot.send_message(message.chat.id, msg8)
             # time.sleep(2)
-            # bot.send_message(message.chat.id, msg9)
+            bot.send_message(message.chat.id, msg9)
             bot1.send_message(message.chat.id, 'bot1')
 
       else:
