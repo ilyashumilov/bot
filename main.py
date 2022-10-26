@@ -14,5 +14,9 @@ def handler(message):
       if message.text == '🔎 Поиск':
             bot.send_message(message.chat.id, msg2, reply_markup=markup2)
 
+@bot.callback_query_handler(lambda query: query.data in ["vk"])
+def process_callback_2(query):
+      bot.send_message(query.message.chat.id, msg3)
+
 
 bot.polling(none_stop=True)
