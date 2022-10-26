@@ -10,7 +10,6 @@ token1  =  os.getenv('TOKEN1')
 bot=telebot.TeleBot(token)
 bot1=telebot.TeleBot(token1)
 
-# @bot.message_handler(content_types=['text'])
 @bot.channel_post_handler(func=lambda m: True,content_types=['text'])
 def handler(message):
       if message.text == '/start':
