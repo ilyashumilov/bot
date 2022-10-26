@@ -1,4 +1,5 @@
 import os
+import time
 import telebot
 from markups import *
 from messages import *
@@ -13,6 +14,15 @@ def handler(message):
 
       if message.text == '🔎 Поиск':
             bot.send_message(message.chat.id, msg2, reply_markup=markup2)
+
+      if message.text == '10':
+            bot.send_message(message.chat.id, msg8)
+            time.sleep(2)
+            bot.send_message(message.chat.id, msg9)
+
+      else:
+            bot.send_message(message.chat.id, msg7)
+
 
 @bot.callback_query_handler(lambda query: query.data in ["vk"])
 def process_callback_2(query):
