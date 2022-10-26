@@ -10,5 +10,9 @@ item1 = types.InlineKeyboardButton("   🌐 ВКонтакте   ", callback_dat
 item2 = types.InlineKeyboardButton("   📷 Instagram   ", callback_data='ig')
 item3 = types.InlineKeyboardButton("   👤 Телеграм   ", callback_data='tg')
 item4 = types.InlineKeyboardButton("   📞 Номер телефона   ", callback_data='no')
-markup2.add(item1,item2,item3,item4)
+markup2.row(item1)
+markup2.row(item2)
+markup2.row(item3)
+markup2.row(item4)
+
 
