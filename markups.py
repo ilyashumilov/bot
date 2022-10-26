@@ -5,7 +5,7 @@ item1 = types.KeyboardButton("🔎 Поиск")
 markup1.add(item1)
 
 
-markup2 = types.ReplyKeyboardMarkup()
+markup2 = types.InlineKeyboardMarkup()
 item1 = types.KeyboardButton("🌐 ВКонтакте")
 item2 = types.KeyboardButton("📷 Instagram")
 item3 = types.KeyboardButton("👤 Телеграм")
