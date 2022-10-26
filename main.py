@@ -18,5 +18,16 @@ def handler(message):
 def process_callback_2(query):
       bot.send_message(query.message.chat.id, msg3)
 
+@bot.callback_query_handler(lambda query: query.data in ["ig"])
+def process_callback_2(query):
+      bot.send_message(query.message.chat.id, msg4)
+
+@bot.callback_query_handler(lambda query: query.data in ["tg"])
+def process_callback_2(query):
+      bot.send_message(query.message.chat.id, msg5)
+
+@bot.callback_query_handler(lambda query: query.data in ["no"])
+def process_callback_2(query):
+      bot.send_message(query.message.chat.id, msg6)
 
 bot.polling(none_stop=True)
