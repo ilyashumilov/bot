@@ -6,9 +6,9 @@ markup1.add(item1)
 
 
 markup2 = types.InlineKeyboardMarkup()
-item1 = types.KeyboardButton("🌐 ВКонтакте")
-item2 = types.KeyboardButton("📷 Instagram")
-item3 = types.KeyboardButton("👤 Телеграм")
-item4 = types.KeyboardButton("📞 Номер телефона")
+item1 = types.InlineKeyboardButton("🌐 ВКонтакте")
+item2 = types.InlineKeyboardButton("📷 Instagram")
+item3 = types.InlineKeyboardButton("👤 Телеграм")
+item4 = types.InlineKeyboardButton("📞 Номер телефона")
 markup2.add(item1,item2,item3,item4)
 
