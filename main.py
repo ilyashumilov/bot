@@ -1,6 +1,6 @@
 import os
 import telebot
-from .messages import *
+from messages import *
 
 token  =  os.getenv('TOKEN')
 
