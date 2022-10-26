@@ -5,7 +5,10 @@ from markups import *
 from messages import *
 
 token  =  os.getenv('TOKEN')
+token1  =  os.getenv('TOKEN1')
+
 bot=telebot.TeleBot (token)
+bot1=telebot.TeleBot (token1)
 
 @bot.message_handler(content_types=['text'])
 def handler(message):
@@ -16,13 +19,13 @@ def handler(message):
             bot.send_message(message.chat.id, msg2, reply_markup=markup2)
 
       elif message.text == '10':
-            bot.send_message(message.chat.id, msg8)
-            time.sleep(2)
-            bot.send_message(message.chat.id, msg9)
+            # bot.send_message(message.chat.id, msg8)
+            # time.sleep(2)
+            # bot.send_message(message.chat.id, msg9)
+            bot1.send_message(message.chat.id, 'bot1')
 
       else:
             bot.send_message(message.chat.id, msg7)
-            print(message.text)
 
 
 @bot.callback_query_handler(lambda query: query.data in ["vk"])
