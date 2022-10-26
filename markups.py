@@ -6,9 +6,9 @@ markup1.add(item1)
 
 
 markup2 = types.InlineKeyboardMarkup()
-item1 = types.InlineKeyboardButton("      🌐 ВКонтакте      ", callback_data='vk')
-item2 = types.InlineKeyboardButton("      📷 Instagram      ", callback_data='ig')
-item3 = types.InlineKeyboardButton("      👤 Телеграм      ", callback_data='tg')
-item4 = types.InlineKeyboardButton("      📞 Номер телефона      ", callback_data='no')
+item1 = types.InlineKeyboardButton("   🌐 ВКонтакте   ", callback_data='vk')
+item2 = types.InlineKeyboardButton("   📷 Instagram   ", callback_data='ig')
+item3 = types.InlineKeyboardButton("   👤 Телеграм   ", callback_data='tg')
+item4 = types.InlineKeyboardButton("   📞 Номер телефона   ", callback_data='no')
 markup2.add(item1,item2,item3,item4)
 
