@@ -18,7 +18,7 @@ while True:
               f'StochRSI > 70 -> overbought -> possible short\n'
         print(msg)
         bot.send_message('-1001814658941',msg)
-        time.sleep(3)
+        time.sleep(300)
 
 
 
