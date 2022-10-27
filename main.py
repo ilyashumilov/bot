@@ -17,7 +17,7 @@ while True:
               f'StochRSI < 20 -> oversold -> possible long\n' \
               f'StochRSI > 70 -> overbought -> possible short\n'
         print(msg)
-        bot.send_message(message.chat.id,'message.chat.id')
+        bot.send_message('-1001814658941',msg)
         time.sleep(3)
 
 
