@@ -15,14 +15,14 @@ while True:
         if resp.json()["valueFastK"] > 70:
             msg = f'Pair: {coin}USDT int 15m\n' \
                   f'StochRSI FastK Value: {"{0:.5g}".format(resp.json()["valueFastK"])}\n' \
-                  f'overbougth -> possible short soon\n' \
+                  f'overbougth -> possible short soon' 
             print(msg)
             bot.send_message('-1001814658941',msg)
             
         elif resp.json()["valueFastK"] < 30:
             msg = f'Pair: {coin}USDT int 15m\n' \
                   f'StochRSI FastK Value: {"{0:.5g}".format(resp.json()["valueFastK"])}\n' \
-                  f'oversold -> possible long soon\n' \
+                  f'oversold -> possible long soon' 
             print(msg)
             bot.send_message('-1001814658941',msg)
             
