@@ -11,7 +11,7 @@ bot=telebot.TeleBot(token)
 @bot.message_handler(content_types=['text'])
 def handler(message):
       if message.text == '/start':
-            bot.send_message(message.chat.id,'message.chat.id')
+            bot.send_message(message.chat.id,message.chat.id)
 
 bot.polling(none_stop=True)
 
