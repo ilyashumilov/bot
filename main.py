@@ -26,7 +26,8 @@ while True:
             print(msg)
             bot.send_message('-1001814658941',msg)
             
-        time.sleep(60)
+        time.sleep(3)
+    time.sleep(60)
 
 
 
