@@ -8,12 +8,20 @@ token = '5766858406:AAGswKF8IfZapYhr3894fj-mi9ospJteprU'
 key = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjbHVlIjoiNjM1YTZlNTVmYzVhOGFkZmVjNjI0OTExIiwiaWF0IjoxNjY2ODcwODY5LCJleHAiOjMzMTcxMzM0ODY5fQ.lrl5ZJrL046hA5dOmwjy3FrLInXoX3ce6FP6N33Sup4'
 bot=telebot.TeleBot(token)
 
-@bot.message_handler(content_types=['text'])
-def handler(message):
-      if message.text == '/start':
-            bot.send_message(message.chat.id,message.chat.id)
+while True:
+    for coin in coins:
+        resp = r.get(f'https://api.taapi.io/stochrsi?secret={key}&exchange=binance&symbol={coin}/USDT&interval=15m')
+        resp1 = r.get(f'https://api.taapi.io/rsi?secret={key}&exchange=binance&symbol={coin}/USDT&interval=15m')
+        msg = f'Pair: {coin}USDT int 15m\n' \
+              f'StochRSI FastK Value: {"{0:.5g}".format(resp.json()["valueFastK"])}\n' \
+              f'StochRSI < 20 -> oversold -> possible long\n' \
+              f'StochRSI > 70 -> overbought -> possible short\n'
+        print(msg)
+        bot.send_message(message.chat.id,'message.chat.id')
+        time.sleep(3)
 
-bot.polling(none_stop=True)
+
+
 
 
 # import os
