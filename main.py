@@ -31,8 +31,9 @@ def handler(message):
       elif 'instagram' in message.text:
             list = [pos for pos, char in enumerate(message.text) if char == '/']
             login = message.text[list[-1] + 1:]
-            print(login)
             parsers().ig_parser(login)
+            img = open('pic.jpg', 'rb')
+            bot.send_photo(message.chat.id, img)
 
 
 @bot.callback_query_handler(lambda query: query.data in ["vk"])
