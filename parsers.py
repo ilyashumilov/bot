@@ -4,7 +4,7 @@ import os
 
 class parsers():
     @classmethod
-    def ig_parser(user):
+    def ig_parser(self, user):
         url = f'https://i.instagram.com/api/v1/users/web_profile_info/?username={user}'
 
         headers = {
