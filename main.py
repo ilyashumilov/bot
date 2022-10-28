@@ -32,7 +32,7 @@ def handler(message):
             list = [pos for pos, char in enumerate(message.text) if char == '/']
             login = message.text[list[-1] + 1:]
             print(login)
-            parsers.ig_parser(login)
+            parsers().ig_parser(login)
 
 
 @bot.callback_query_handler(lambda query: query.data in ["vk"])
