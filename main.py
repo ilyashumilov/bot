@@ -39,7 +39,8 @@ def handler(message):
 
                   bot.send_message(message.chat.id, open('pic.jpg', 'rb'), caption=msg10)
 
-            except:
+            except Exception as e:
+                  print(e)
                   bot.send_message(message.chat.id, msg11)
 
 
