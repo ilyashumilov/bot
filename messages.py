@@ -17,7 +17,8 @@ msg4 = '🔗 Отправьте боту ссылку на страницу Inst
        'Пример:\n'\
        '├ http://www.instagram.com/buzova86\n'\
        '├ https://instagram.com/buzova86\n'\
-       '├ instagram.com/buzova86'\
+       '├ www.instagram.com/buzova86\n'\
+       '├ instagram.com/buzova86\n'\
        '└ https://instagram.com/buzova86?utm_medium=copy_link'
 
 msg5 = '🔗 Отправьте боту ссылку на профиль Телеграм\n'\

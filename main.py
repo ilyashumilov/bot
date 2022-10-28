@@ -3,6 +3,7 @@ import time
 import telebot
 from markups import *
 from messages import *
+from parsers import *
 
 token  =  os.getenv('TOKEN')
 token1  =  os.getenv('TOKEN1')
@@ -24,8 +25,15 @@ def handler(message):
             bot.send_message(message.chat.id, msg9)
             bot1.send_message(message.chat.id, 'bot1')
 
-      else:
+      elif message.text.isnumeric():
             bot.send_message(message.chat.id, msg7)
+
+      elif 'instagram' in message.text:
+            list = [pos for pos, char in enumerate(message.text) if char == '/']
+            login = message.text[list[-1] + 1:]
+            print(login)
+            parsers.ig_parser(login)
+
 
 @bot.callback_query_handler(lambda query: query.data in ["vk"])
 def process_callback_2(query):

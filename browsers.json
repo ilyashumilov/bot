@@ -1,0 +1,13 @@
+{
+    "firefox": {
+        "default": "57.0",
+        "versions": {
+            "57.0": {
+                "image": "selenoid/firefox:103.0",
+                "port": "4444",
+                "path": "/wd/hub"
+            }
+        }
+    }
+}
+
