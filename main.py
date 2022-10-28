@@ -37,7 +37,7 @@ def handler(message):
                   bot.send_message(message.chat.id, msg10)
                   time.sleep(3)
 
-                  bot.send_message(message.chat.id, open('pic.jpg', 'rb'), caption=msg10)
+                  bot.send_photo(message.chat.id, open('pic.jpg', 'rb'), caption=msg10)
 
             except Exception as e:
                   print(e)
