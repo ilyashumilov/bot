@@ -80,11 +80,10 @@ class parsers():
 
         print('screenshot taken')
 
-        WebDriverWait(driver, 30).until(EC.element_to_be_clickable((By.XPATH, Xpath.photo)))
-        print('auth completed')
-
         driver.get(f'https://vk.com/{username}')
         print('profile uploaded')
+        driver.save_screenshot('3d.png')
+
 
         WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, Xpath.photo)))
         print('photo uploaded')
