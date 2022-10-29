@@ -36,7 +36,7 @@ class parsers():
         print(os.listdir())
 
     @classmethod
-    def vk_parser(username):
+    def vk_parser(self,username):
         desired_capabilities = {
             "browserName": "firefox",
             "selenoid:options": {
