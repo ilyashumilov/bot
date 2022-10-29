@@ -1,7 +1,7 @@
 import os
 import time
 import telebot
-from telebot import InputMediaPhoto
+from telebot.types import InputMediaPhoto
 
 from markups import *
 from messages import *
