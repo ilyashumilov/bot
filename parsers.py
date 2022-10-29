@@ -77,7 +77,13 @@ class parsers():
         time.sleep(4)
         driver.get(f'https://vk.com/{username}')
 
-        time.sleep(4)
+        WebDriverWait(driver, 30).until(
+            expected_conditions.element_to_be_clickable((
+                By.XPATH, Xpath.photo
+            ))
+        )
+        driver.save_screenshot('ss.png')
+
         item = driver.find_element(By.XPATH, Xpath.photo)
 
         print(item.get_attribute("src"))
