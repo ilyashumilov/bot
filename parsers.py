@@ -77,6 +77,7 @@ class parsers():
         time.sleep(4)
         driver.get(f'https://vk.com/{username}')
 
+        time.sleep(4)
         item = driver.find_element(By.XPATH, Xpath.photo)
 
         print(item.get_attribute("src"))

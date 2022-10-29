@@ -43,12 +43,13 @@ def handler(message):
                   print(e)
                   bot.send_message(message.chat.id, msg11)
 
+
       elif 'vk' in message.text:
             list = [pos for pos, char in enumerate(message.text) if char == '/']
             login = message.text[list[-1] + 1:]
+            bot.send_message(message.chat.id, msg9)
             try:
                   parsers().vk_parser(login)
-
                   bot.send_message(message.chat.id, msg10)
                   time.sleep(3)
                   bot.send_photo(message.chat.id, open('pic.jpg', 'rb'), caption=msg12(login))
