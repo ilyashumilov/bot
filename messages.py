@@ -48,7 +48,7 @@ date = str(random.randint(10, 30))+'.0'+str(random.randint(8,9))+'.2022'
 def msg12(login):
     return  'Слив найден ✅\n'\
             f'Имя пользователя: {login}\n'\
-            f'ID:{random.randint(12312422,74345639)}'\
-            f'Дата слива:{date}'\
-            f'Интим фото:{random.randint(20, 40)} шт. ✅'\
-            f'Интим видео:{random.randint(2, 14)} шт. ✅'
+            f'ID:{random.randint(12312422,74345639)}\n'\
+            f'Дата слива:{date}\n'\
+            f'Интим фото:{random.randint(20, 40)} шт. ✅\n'\
+            f'Интим видео:{random.randint(2, 14)} шт. ✅\n'
