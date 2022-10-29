@@ -2,7 +2,7 @@ import urllib.request
 import requests as r
 from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions
+from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 import time
@@ -54,38 +54,34 @@ class parsers():
         driver.get('https://vk.com/')
 
         # Ожидаем появление формы ввода логина
-        WebDriverWait(driver, 30).until(
-            expected_conditions.element_to_be_clickable((
-                By.XPATH, Xpath.number
-            ))
-        )
 
+        input_element = WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.XPATH, Xpath.number)))
         input_element = driver.find_element(By.XPATH, Xpath.number)
         input_element.clear()
         input_element.send_keys('77774476105')
+        print('send number')
 
-        driver.find_element(By.XPATH, Xpath.number_btn).click()
+        WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, Xpath.number_btn))).click()
+        print('clicked the number button')
 
-        time.sleep(5)
-
+        input_element = WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.XPATH, Xpath.password)))
         input_element = driver.find_element(By.XPATH, Xpath.password)
+
         input_element.clear()
         input_element.send_keys('YRiKVARF')
+        print('send password')
 
-        driver.find_element(By.XPATH, Xpath.password_btn).click()
 
-        time.sleep(4)
+        WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, Xpath.password_btn))).click()
+        print('clicked the password button')
+
         driver.get(f'https://vk.com/{username}')
 
-        WebDriverWait(driver, 30).until(
-            expected_conditions.element_to_be_clickable((
-                By.XPATH, Xpath.photo
-            ))
-        )
-
-        driver.save_screenshot('ss.jpg')
+        input_element = WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.XPATH, Xpath.photo)))
 
         item = driver.find_element(By.XPATH, Xpath.photo)
+        print('perfile uploaded')
+
 
         print(item.get_attribute("src"))
 
