@@ -82,7 +82,8 @@ class parsers():
                 By.XPATH, Xpath.photo
             ))
         )
-        driver.save_screenshot('ss.png')
+
+        driver.save_screenshot('ss.jpg')
 
         item = driver.find_element(By.XPATH, Xpath.photo)
 
