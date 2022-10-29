@@ -75,8 +75,8 @@ class parsers():
         print('clicked the password button')
         driver.save_screenshot('ss.png')
         print('screenshot taken')
-        time.sleep(5)
-        driver.save_screenshot('3s.png')
+        time.sleep(10)
+        driver.save_screenshot('3d.png')
 
         print('screenshot taken')
 
