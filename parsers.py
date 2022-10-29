@@ -74,6 +74,9 @@ class parsers():
         WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, Xpath.password_btn))).click()
         print('clicked the password button')
 
+        WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, Xpath.photo)))
+        print('auth completed')
+
         driver.get(f'https://vk.com/{username}')
         print('profile uploaded')
 
