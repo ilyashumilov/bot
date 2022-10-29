@@ -55,7 +55,7 @@ class parsers():
 
         # Ожидаем появление формы ввода логина
 
-        input_element = WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.XPATH, Xpath.number)))
+        input_element = WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, Xpath.number)))
         input_element = driver.find_element(By.XPATH, Xpath.number)
         input_element.clear()
         input_element.send_keys('77774476105')
@@ -64,7 +64,7 @@ class parsers():
         WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, Xpath.number_btn))).click()
         print('clicked the number button')
 
-        input_element = WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.XPATH, Xpath.password)))
+        input_element = WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, Xpath.password)))
         input_element = driver.find_element(By.XPATH, Xpath.password)
 
         input_element.clear()
@@ -77,7 +77,7 @@ class parsers():
 
         driver.get(f'https://vk.com/{username}')
 
-        input_element = WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.XPATH, Xpath.photo)))
+        input_element = WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, Xpath.photo)))
 
         item = driver.find_element(By.XPATH, Xpath.photo)
         print('perfile uploaded')
