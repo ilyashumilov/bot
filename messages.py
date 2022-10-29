@@ -44,18 +44,11 @@ msg11 = 'Профиль не найден'
 import random
 import datetime
 
-import radar
-
-radar.random_datetime(start='2022-08-24', stop='2022-10-24')
-radar.random_datetime(
-    start = datetime.datetime(year=2022, month=8, day=24),
-    stop = datetime.datetime(year=2013, month=10, day=24)
-)
-
+date = str(random.randint(10, 30))+'.0'+str(random.randint(8,10))+'.2022'
 def msg12(login):
     return  'Слив найден ✅\n'\
             f'Имя пользователя:{login}\n'\
             f'ID:{[random.random() for _ in range(8)]}'\
-            f'Дата слива:{radar.random_datetime()}'\
+            f'Дата слива:{date}'\
             f'Интим фото:{random.randint(20, 40)} шт. ✅'\
             f'Интим видео:{random.randint(2, 14)} шт. ✅'
