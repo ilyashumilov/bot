@@ -7,7 +7,7 @@ services:
     ports:
       - "4444:4444"
     volumes:
-      - "$PWD/api-selenium:/etc/selenoid/" # assumed current dir contains browsers.json
+      - "$PWD:/etc/selenoid/" # assumed current dir contains browsers.json
       - "/var/run/docker.sock:/var/run/docker.sock"
     restart: always
 

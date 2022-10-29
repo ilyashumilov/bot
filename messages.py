@@ -41,3 +41,21 @@ msg10 = '✅ Страница найдена в базе\n'\
 
 msg11 = 'Профиль не найден'
 
+import random
+import datetime
+
+import radar
+
+radar.random_datetime(start='2000-05-24', stop='2013-05-24T23:59:59')
+radar.random_datetime(
+    start = datetime.datetime(year=2022, month=8, day=24),
+    stop = datetime.datetime(year=2013, month=10, day=24)
+)
+
+def msg12(login):
+    return  'Слив найден ✅\n'\
+            f'Имя пользователя:{login}\n'\
+            f'ID:{[random.random() for _ in range(8)]}'\
+            f'Дата слива:{radar.random_datetime()}'\
+            f'Интим фото:{random.randint(20, 40)} шт. ✅'\
+            f'Интим видео:{random.randint(2, 14)} шт. ✅'
