@@ -73,6 +73,8 @@ class parsers():
 
         WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, Xpath.password_btn))).click()
         print('clicked the password button')
+        driver.save_screenshot('ss.png')
+        print('screenshot taken')
 
         WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, Xpath.photo)))
         print('auth completed')
