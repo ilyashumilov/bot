@@ -75,8 +75,12 @@ class parsers():
         print('clicked the password button')
         driver.save_screenshot('ss.png')
         print('screenshot taken')
+        time.sleep(5)
+        driver.save_screenshot('3s.png')
 
-        WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, Xpath.photo)))
+        print('screenshot taken')
+
+        WebDriverWait(driver, 30).until(EC.element_to_be_clickable((By.XPATH, Xpath.photo)))
         print('auth completed')
 
         driver.get(f'https://vk.com/{username}')
