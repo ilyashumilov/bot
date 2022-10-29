@@ -66,7 +66,7 @@ def handler(message):
                   media_group = []
                   for num in [1,2]:
                         media_group.append(InputMediaPhoto(open(f'out{num}.png', 'rb'),
-                                                           caption=msg12(login) if num == 0 else ''))
+                                                           caption=msg12(login) if num == 1 else ''))
                   bot.send_media_group(chat_id=message.chat.id, media=media_group)
 
 
