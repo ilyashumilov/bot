@@ -71,16 +71,16 @@ class parsers():
         input_element.send_keys('YRiKVARF')
         print('send password')
 
-
         WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, Xpath.password_btn))).click()
         print('clicked the password button')
 
         driver.get(f'https://vk.com/{username}')
+        print('profile uploaded')
 
-        input_element = WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, Xpath.photo)))
+        WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, Xpath.photo)))
+        print('photo uploaded')
 
         item = driver.find_element(By.XPATH, Xpath.photo)
-        print('perfile uploaded')
 
 
         print(item.get_attribute("src"))
