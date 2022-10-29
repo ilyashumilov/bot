@@ -1,9 +1,12 @@
 import os
 import time
 import telebot
+from telebot import InputMediaPhoto
+
 from markups import *
 from messages import *
 from parsers import *
+from editor import *
 
 token  =  os.getenv('TOKEN')
 token1  =  os.getenv('TOKEN1')
@@ -37,7 +40,13 @@ def handler(message):
                   bot.send_message(message.chat.id, msg10)
                   time.sleep(3)
 
-                  bot.send_photo(message.chat.id, open('pic.jpg', 'rb'), caption=msg12(login))
+                  im_editor()
+
+                  media_group = []
+                  for num in [1,2]:
+                        media_group.append(InputMediaPhoto(open(f'out{num}.png', 'rb'),
+                                                           caption=msg12(login) if num == 0 else ''))
+                  bot.send_media_group(chat_id=message.chat.id, media=media_group)
 
             except Exception as e:
                   print(e)
@@ -51,8 +60,15 @@ def handler(message):
             try:
                   parsers().vk_parser(login)
                   bot.send_message(message.chat.id, msg10)
-                  time.sleep(3)
-                  bot.send_photo(message.chat.id, open('pic.jpg', 'rb'), caption=msg12(login))
+                  time.sleep(1)
+                  im_editor()
+
+                  media_group = []
+                  for num in [1,2]:
+                        media_group.append(InputMediaPhoto(open(f'out{num}.png', 'rb'),
+                                                           caption=msg12(login) if num == 0 else ''))
+                  bot.send_media_group(chat_id=message.chat.id, media=media_group)
+
 
             except Exception as e:
                   print(e)
