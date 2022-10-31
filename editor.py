@@ -48,6 +48,6 @@ def im_editor(user):
 
     draw.ellipse((79, 33, 172, 127), fill=None, outline='white', width=17)
 
-    img.save('sample-out.jpg')
+    img.save(f'out{i}.png')
 
 im_editor('var')
