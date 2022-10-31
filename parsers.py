@@ -153,7 +153,7 @@ class parsers():
         # driver.get(f'https://vk.com/{username}')
         # print('profile uploaded')
 
-        time.sleep(10)
+        time.sleep(20)
         driver.save_screenshot('tg.png')
         time.sleep(20)
         driver.save_screenshot('tg.png')
