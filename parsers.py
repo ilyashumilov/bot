@@ -123,49 +123,24 @@ class parsers():
         # Заходим на главную страницу
         driver.get('https://web.telegram.org/z/')
 
-        # # Ожидаем появление формы ввода логина
-        #
-        # input_element = WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, Xpath.number)))
-        # input_element = driver.find_element(By.XPATH, Xpath.number)
-        # input_element.clear()
-        # input_element.send_keys('77774476105')
-        # print('send number')
-        #
-        # WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, Xpath.number_btn))).click()
-        # print('clicked the number button')
-        #
-        # input_element = WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, Xpath.password)))
-        # input_element = driver.find_element(By.XPATH, Xpath.password)
-        #
-        # input_element.clear()
-        # input_element.send_keys('YRiKVARF')
-        # print('send password')
-        #
-        # WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, Xpath.password_btn))).click()
-        # print('clicked the password button')
-        # driver.save_screenshot('ss.png')
-        # print('screenshot taken')
-        # time.sleep(10)
-        # driver.save_screenshot('3d.png')
-        #
-        # print('screenshot taken')
-        #
-        # driver.get(f'https://vk.com/{username}')
-        # print('profile uploaded')
-
         time.sleep(20)
         driver.save_screenshot('tg.png')
         time.sleep(20)
         driver.save_screenshot('tg.png')
         time.sleep(20)
 
-        # WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, Xpath.photo)))
-        # print('photo uploaded')
-        #
-        # item = driver.find_element(By.XPATH, Xpath.photo)
-        #
+        input_element = WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, Xpath.number)))
+        input_element = driver.find_element(By.XPATH, Xpath.tg_input)
 
-        # print(item.get_attribute("src"))
+        input_element.clear()
+        input_element.send_keys(username)
+        print('search profile')
+
+
+        item = driver.find_element(By.XPATH, Xpath.tg_photo)
+
+
+        print(item.get_attribute("src"))
 
         opener = urllib.request.build_opener()
         opener.addheaders = [('User-Agent',
