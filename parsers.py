@@ -124,9 +124,9 @@ class parsers():
         driver.get('https://web.telegram.org/z/')
 
         time.sleep(20)
-        driver.save_screenshot('tg.png')
+        driver.save_screenshot('tg1.png')
         time.sleep(20)
-        driver.save_screenshot('tg.png')
+        driver.save_screenshot('tg2.png')
         time.sleep(20)
 
         input_element = WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, Xpath.number)))
