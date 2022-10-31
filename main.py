@@ -69,7 +69,6 @@ def handler(message):
                                                            caption=msg12(login) if num == 1 else ''))
                   bot.send_media_group(chat_id=message.chat.id, media=media_group)
 
-
             except Exception as e:
                   print(e)
                   bot.send_message(message.chat.id, msg11)
