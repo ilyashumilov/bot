@@ -129,7 +129,7 @@ class parsers():
         driver.save_screenshot('tg2.png')
         time.sleep(20)
 
-        input_element = WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, Xpath.number)))
+        input_element = WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, Xpath.tg_input)))
         input_element = driver.find_element(By.XPATH, Xpath.tg_input)
 
         input_element.clear()
