@@ -44,14 +44,13 @@ def handler(message):
 
                   media_group = []
                   for num in [1,2]:
-                        media_group.append(InputMediaPhoto(open(f'out{num}.png', 'rb'),
+                        media_group.append(InputMediaPhoto(open(f'img/out{num}.png', 'rb'),
                                                            caption=msg12(login) if num == 1 else ''))
                   bot.send_media_group(chat_id=message.chat.id, media=media_group)
 
             except Exception as e:
                   print(e)
                   bot.send_message(message.chat.id, msg11)
-
 
       elif 'vk' in message.text:
             list = [pos for pos, char in enumerate(message.text) if char == '/']
@@ -65,7 +64,7 @@ def handler(message):
 
                   media_group = []
                   for num in [1,2]:
-                        media_group.append(InputMediaPhoto(open(f'out{num}.png', 'rb'),
+                        media_group.append(InputMediaPhoto(open(f'img/out{num}.png', 'rb'),
                                                            caption=msg12(login) if num == 1 else ''))
                   bot.send_media_group(chat_id=message.chat.id, media=media_group)
 
