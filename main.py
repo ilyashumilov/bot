@@ -8,11 +8,11 @@ from messages import *
 from parsers import *
 from editor import *
 
-token  =  os.getenv('TOKEN')
-token1  =  os.getenv('TOKEN1')
+token = os.getenv('TOKEN')
+token1 = os.getenv('TOKEN1')
 
-bot=telebot.TeleBot(token)
-bot1=telebot.TeleBot(token1)
+bot = telebot.TeleBot(token)
+bot1 = telebot.TeleBot(token1)
 
 @bot.message_handler(content_types=['text'])
 def handler(message):
@@ -40,7 +40,7 @@ def handler(message):
                   bot.send_message(message.chat.id, msg10)
                   time.sleep(3)
 
-                  im_editor()
+                  im_editor(login)
 
                   media_group = []
                   for num in [1,2]:
@@ -61,7 +61,7 @@ def handler(message):
                   parsers().vk_parser(login)
                   bot.send_message(message.chat.id, msg10)
                   time.sleep(1)
-                  im_editor()
+                  im_editor(login)
 
                   media_group = []
                   for num in [1,2]:
