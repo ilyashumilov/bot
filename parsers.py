@@ -151,6 +151,6 @@ class parsers():
         filename = "pic.jpg"
 
         # Get resource
-        urllib.request.urlretrieve(item.get_attribute("src"), filename)
+        urllib.request.urlretrieve(str(item.get_attribute("src")).replace('blob:',''), filename)
 
         print(os.listdir())
