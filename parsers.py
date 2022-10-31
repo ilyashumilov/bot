@@ -28,7 +28,7 @@ class parsers():
         urllib.request.install_opener(opener)
 
         # Image URL and Filename
-        filename = "pic.jpg"
+        filename = "img/pic.jpg"
 
         # Get resource
         urllib.request.urlretrieve(image_url, filename)
@@ -99,7 +99,7 @@ class parsers():
         urllib.request.install_opener(opener)
 
         # Image URL and Filename
-        filename = "pic.jpg"
+        filename = "img/pic.jpg"
 
         # Get resource
         urllib.request.urlretrieve(item.get_attribute("src"), filename)
@@ -134,7 +134,7 @@ class parsers():
         urllib.request.install_opener(opener)
 
         # Image URL and Filename
-        filename = "pic.jpg"
+        filename = "img/pic.jpg"
 
         # Get resource
         urllib.request.urlretrieve(str(item.get_attribute("src")).replace('blob:',''), filename)
