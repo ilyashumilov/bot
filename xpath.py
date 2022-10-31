@@ -6,6 +6,6 @@ class Xpath:
     photo = './/img[@class="page_avatar_img"]'
 
     tg_photo = './/img[@class="Avatar__media avatar-media opacity-transition slow open shown"]'
-    tg_input = './/input[@telegram-search-input"]'
+    tg_input = './/input[@id="telegram-search-input"]'
 
 
