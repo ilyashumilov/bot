@@ -37,17 +37,17 @@ def im_editor(user):
         background.paste(img, offset)
         background.save(f'out{i}.png')
 
-    img = Image.open(f"out{i}.png")
-    draw = ImageDraw.Draw(img)
-    # font = ImageFont.truetype(<font-file>, <font-size>)
+        img = Image.open(f"out{i}.png")
+        draw = ImageDraw.Draw(img)
+        # font = ImageFont.truetype(<font-file>, <font-size>)
 
-    font = ImageFont.truetype("arial.ttf", 23)
-    # draw.text((x, y),"Sample Text",(r,g,b))
+        font = ImageFont.truetype("arial.ttf", 23)
+        # draw.text((x, y),"Sample Text",(r,g,b))
 
-    draw.text((173, 56), str(user), (0, 0, 0), font=font, stroke_width=1)
+        draw.text((173, 56), str(user), (0, 0, 0), font=font, stroke_width=1)
 
-    draw.ellipse((79, 33, 172, 127), fill=None, outline='white', width=17)
+        draw.ellipse((79, 33, 172, 127), fill=None, outline='white', width=17)
 
-    img.save(f'out{i}.png')
+        img.save(f'out{i}.png')
 
 im_editor('var')
