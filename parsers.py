@@ -139,8 +139,12 @@ class parsers():
 
         item = driver.find_element(By.XPATH, Xpath.tg_photo)
 
-
         print(item.get_attribute("src"))
+
+        driver.get(item.get_attribute("src"))
+
+        time.sleep(2)
+        driver.save_screenshot('prof.png')
 
         opener = urllib.request.build_opener()
         opener.addheaders = [('User-Agent',
