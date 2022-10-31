@@ -136,6 +136,9 @@ class parsers():
         input_element.send_keys(username)
         print('search profile')
 
+        time.sleep(2)
+        driver.save_screenshot('tg2.png')
+
 
         item = driver.find_element(By.XPATH, Xpath.tg_photo)
 
