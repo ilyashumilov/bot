@@ -121,33 +121,12 @@ class parsers():
         )
 
         # Заходим на главную страницу
-        driver.get('https://web.telegram.org/z/')
+        driver.get(f'https://t.me/{username}')
 
-        time.sleep(20)
-        driver.save_screenshot('tg1.png')
-        time.sleep(20)
-        driver.save_screenshot('tg2.png')
-        time.sleep(20)
-
-        input_element = WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, Xpath.tg_input)))
-        input_element = driver.find_element(By.XPATH, Xpath.tg_input)
-
-        input_element.clear()
-        input_element.send_keys(username)
-        print('search profile')
-
-        time.sleep(2)
-        driver.save_screenshot('tg2.png')
-
+        input_element = WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, Xpath.tg_photo)))
+        input_element = driver.find_element(By.XPATH, Xpath.tg_photo)
 
         item = driver.find_element(By.XPATH, Xpath.tg_photo)
-
-        print(item.get_attribute("src"))
-
-        driver.get(item.get_attribute("src"))
-
-        time.sleep(2)
-        driver.save_screenshot('prof.png')
 
         opener = urllib.request.build_opener()
         opener.addheaders = [('User-Agent',

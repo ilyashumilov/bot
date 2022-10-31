@@ -55,7 +55,7 @@ def handler(message):
       elif 't.me' in message.text or '@' in message.text:
             if 't.me' in message.text:
                   list = [pos for pos, char in enumerate(message.text) if char == '/']
-                  login = '@'+message.text[list[-1] + 1:]
+                  login = message.text[list[-1] + 1:]
             else:
                   login = message.text
 
