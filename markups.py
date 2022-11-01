@@ -23,3 +23,15 @@ markup3.row(item1)
 markup3.row(item2)
 
 
+def markup3(url,key,amount):
+    url = f'https://oplata.qiwi.com/create?publicKey={key}&readonly_extras=cf1&amount='
+    markup = types.InlineKeyboardMarkup()
+    item1 = types.InlineKeyboardButton("Приобрести 💳 | 399 ₽", url=url+'399.00')
+    item2 = types.InlineKeyboardButton("Купить безлимит ♾️ | 990 ₽",url=url+'990.00')
+    markup.row(item1)
+    markup.row(item2
+               )
+    return markup
+
+
+

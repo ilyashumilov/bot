@@ -10,6 +10,7 @@ from editor import *
 
 token = os.getenv('TOKEN')
 token1 = os.getenv('TOKEN1')
+public_key = os.getenv('KEY')
 
 bot = telebot.TeleBot(token)
 bot1 = telebot.TeleBot(token1)
@@ -106,8 +107,9 @@ def handler(message):
                   print(e)
                   bot.send_message(message.chat.id, msg11)
 
+
 @bot.callback_query_handler(lambda query: query.data in ["vk"])
-def process_callback_2(query):
+def process_callback_1(query):
       bot.send_message(query.message.chat.id, msg3)
 
 @bot.callback_query_handler(lambda query: query.data in ["ig"])
@@ -115,11 +117,20 @@ def process_callback_2(query):
       bot.send_message(query.message.chat.id, msg4)
 
 @bot.callback_query_handler(lambda query: query.data in ["tg"])
-def process_callback_2(query):
+def process_callback_3(query):
       bot.send_message(query.message.chat.id, msg5)
 
 @bot.callback_query_handler(lambda query: query.data in ["no"])
-def process_callback_2(query):
+def process_callback_4(query):
       bot.send_message(query.message.chat.id, msg6)
+#
+# @bot.callback_query_handler(lambda query: query.data in ["limit_pay"])
+# def process_callback_5(query):
+#       print(query.data)
+#       bot.send_message(query.message.chat.id, msg14(1))
+#
+# @bot.callback_query_handler(lambda query: query.data in ["unlimit_pay"])
+# def process_callback_6(query):
+#       bot.send_message(query.message.chat.id, msg14(1))
 
 bot.polling(none_stop=True)
