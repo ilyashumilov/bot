@@ -34,6 +34,7 @@ def handler(message):
       elif 'instagram' in message.text:
             list = [pos for pos, char in enumerate(message.text) if char == '/']
             login = message.text[list[-1] + 1:]
+            bot.send_message(message.chat.id, msg9)
             try:
                   parsers().ig_parser(login)
 
@@ -60,6 +61,7 @@ def handler(message):
                   login = message.text[list[-1] + 1:]
             else:
                   login = message.text
+            bot.send_message(message.chat.id, msg9)
 
             try:
                   parsers().tg_parser(login)
