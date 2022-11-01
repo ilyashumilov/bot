@@ -15,4 +15,11 @@ markup2.row(item2)
 markup2.row(item3)
 markup2.row(item4)
 
+markup3 = types.InlineKeyboardMarkup()
+item1 = types.InlineKeyboardButton("Приобрести 💳|399 ₽", callback_data='limit_pay')
+item2 = types.InlineKeyboardButton("Купить безлимит ♾️|399 ₽", callback_data='unlimit_pay')
+
+markup3.row(item1)
+markup3.row(item2)
+
 

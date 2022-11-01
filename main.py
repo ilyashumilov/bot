@@ -47,6 +47,8 @@ def handler(message):
                         media_group.append(InputMediaPhoto(open(f'img/out{num}.png', 'rb'),
                                                            caption=msg12(login) if num == 1 else ''))
                   bot.send_media_group(chat_id=message.chat.id, media=media_group)
+                  time.sleep(2)
+                  bot.send_message(message.chat.id, msg13(login), reply_markup=markup3)
 
             except Exception as e:
                   print(e)
@@ -72,6 +74,8 @@ def handler(message):
                         media_group.append(InputMediaPhoto(open(f'img/out{num}.png', 'rb'),
                                                            caption=msg12(login) if num == 1 else ''))
                   bot.send_media_group(chat_id=message.chat.id, media=media_group)
+                  time.sleep(2)
+                  bot.send_message(message.chat.id, msg13(login), reply_markup=markup3)
 
             except Exception as e:
                   print(e)
@@ -92,6 +96,9 @@ def handler(message):
                         media_group.append(InputMediaPhoto(open(f'img/out{num}.png', 'rb'),
                                                            caption=msg12(login) if num == 1 else ''))
                   bot.send_media_group(chat_id=message.chat.id, media=media_group)
+                  time.sleep(2)
+                  bot.send_message(message.chat.id, msg13(login), reply_markup=markup3)
+
 
             except Exception as e:
                   print(e)

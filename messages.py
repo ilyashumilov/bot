@@ -52,3 +52,8 @@ def msg12(login):
             f'Дата слива: {date}\n'\
             f'Интим фото: {random.randint(20, 40)} шт. ✅\n'\
             f'Интим видео: {random.randint(2, 14)} шт. ✅\n'
+
+
+def msg13(login):
+    return  f'{login} | 399₽\n' \
+            'Слитые интимные фото уже собраны и готовы к отправке.'
