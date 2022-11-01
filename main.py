@@ -50,7 +50,7 @@ def handler(message):
                                                            caption=msg12(login) if num == 1 else ''))
                   bot.send_media_group(chat_id=message.chat.id, media=media_group)
                   time.sleep(2)
-                  bot.send_message(message.chat.id, msg13(login), reply_markup=markup3)
+                  bot.send_message(message.chat.id, msg13(login), reply_markup=markup3(public_key))
 
             except Exception as e:
                   print(e)
@@ -78,7 +78,7 @@ def handler(message):
                                                            caption=msg12(login) if num == 1 else ''))
                   bot.send_media_group(chat_id=message.chat.id, media=media_group)
                   time.sleep(2)
-                  bot.send_message(message.chat.id, msg13(login), reply_markup=markup3)
+                  bot.send_message(message.chat.id, msg13(login), reply_markup=markup3(public_key))
 
             except Exception as e:
                   print(e)
@@ -100,7 +100,7 @@ def handler(message):
                                                            caption=msg12(login) if num == 1 else ''))
                   bot.send_media_group(chat_id=message.chat.id, media=media_group)
                   time.sleep(2)
-                  bot.send_message(message.chat.id, msg13(login), reply_markup=markup3)
+                  bot.send_message(message.chat.id, msg13(login), reply_markup=markup3(public_key))
 
 
             except Exception as e:

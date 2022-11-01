@@ -15,15 +15,15 @@ markup2.row(item2)
 markup2.row(item3)
 markup2.row(item4)
 
-markup3 = types.InlineKeyboardMarkup()
-item1 = types.InlineKeyboardButton("Приобрести 💳 | 399 ₽", callback_data='limit_pay')
-item2 = types.InlineKeyboardButton("Купить безлимит ♾️ | 990 ₽", callback_data='unlimit_pay')
+# markup3 = types.InlineKeyboardMarkup()
+# item1 = types.InlineKeyboardButton("Приобрести 💳 | 399 ₽", callback_data='limit_pay')
+# item2 = types.InlineKeyboardButton("Купить безлимит ♾️ | 990 ₽", callback_data='unlimit_pay')
+#
+# markup3.row(item1)
+# markup3.row(item2)
 
-markup3.row(item1)
-markup3.row(item2)
 
-
-def markup3(url,key,amount):
+def markup3(key):
     url = f'https://oplata.qiwi.com/create?publicKey={key}&readonly_extras=cf1&amount='
     markup = types.InlineKeyboardMarkup()
     item1 = types.InlineKeyboardButton.WithUrl(text="Приобрести 💳 | 399 ₽", url=url+'399.00')
